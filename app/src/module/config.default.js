@@ -2,13 +2,13 @@ var config = {
   scheme: 'alpha',
   env: {
     alpha: {
-      url_prefix: 'http://127.0.0.1:4000'
+      url_prefix: 'https://live.niuguwang.com'
     },
     beta: {
-      url_prefix: ''
+      url_prefix: 'https://live.niuguwang.com'
     },
     release: {
-      url_prefix: ''
+      url_prefix: 'https://live.niuguwang.com'
     }
   },
   domains: {
