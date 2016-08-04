@@ -1,8 +1,4 @@
-# 使用说明
-
-[![Build Status](https://travis-ci.org/sapling-team/generator-sapling-pc.svg?branch=master)](https://travis-ci.org/sapling-team/generator-sapling-pc)
-
-MP牛人BBS  PC端项目脚手架，项目所使用的工具如下：
+# mp牛人BBS项目
 
 > Node version v4.4.1
 
@@ -19,18 +15,6 @@ MP牛人BBS  PC端项目脚手架，项目所使用的工具如下：
 
 
 ## How use it?
-
-download project
-
-	git clone 该项目git
-
-remove git `origin` and add your project `new origin`
-
-	git remote remove origin
-
-	git remote add origin 新项目的git 
-
-	git pull
 
 install global bower
 
@@ -91,9 +75,6 @@ this.imgContainer.html('<img src="'+imgSrc+'"/>');
 
 js使用commonjs模块化规范来组织
 
-## CDN
-
-使用`npm run build`时可以在`webpack.product.config.js`文件中找到`publicPath`替换成你使用的CDN地址。
 
 ## eslint
 
@@ -109,7 +90,6 @@ js使用commonjs模块化规范来组织
 - [bootcss v3](http://v3.bootcss.com/)
 - [juicer](http://juicer.name/docs/docs_zh_cn.html#!syntax)
 
-阅读[base-extend-backbone](https://github.com/sapling-team/base-extend-backbone)和[auxiliary-additions](https://github.com/sapling-team/auxiliary-additions)来熟悉如何使用base扩展和其他通用的函数库。
 
 ## 第三方库处理
 
