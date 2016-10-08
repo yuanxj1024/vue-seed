@@ -18,8 +18,8 @@ gulp.task('server', function () {
 
 gulp.task('build', function () {
   return gulp.src([
-      'app/link/*.*',
-      'app/link/**/*.*',
+      'app/plugins/*.*',
+      'app/plugins/**/*.*',
     ], {
       base: 'app/'
     })
@@ -27,10 +27,10 @@ gulp.task('build', function () {
 });
 gulp.task('copy-to-dist', function () {
   return gulp.src([
-      'app/link/*.*',
-      'app/link/**/*.*',
+      'app/plugins/*.*',
+      'app/plugins/**/*.*',
     ], {
-      base: 'app/'
+      base: 'app'
     })
     .pipe(gulp.dest('./dist'))
 });

@@ -28,7 +28,7 @@ var plugins = [];
 plugins.push(extractSASS);
 
 //  提取公共文件
-plugins.push(new webpack.optimize.CommonsChunkPlugin('common', 'common.js'));
+// plugins.push(new webpack.optimize.CommonsChunkPlugin('common', 'common.js'));
 
 //  处理html
 var pages = getEntry('./app/web/*.jade');
@@ -70,7 +70,14 @@ var config = {
     }, {
       test: /\.js$/,
       loader: 'eslint-loader',
-      exclude: /(node_modules)/
+      exclude: /(node_modules)|(www)/
+    }, {
+      test: /\.js$/,
+      loader: 'babel-loader',
+      exclude: /(node_modules)/,
+      query: {
+        presets: ['es2015']
+      }
     }, {
       test: /\.scss$/i,
       loader: extractSASS.extract(['css', 'sass'])

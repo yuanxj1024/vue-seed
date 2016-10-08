@@ -7,9 +7,7 @@ var containerPath = path.resolve('./');
 //	别名
 var alias = {
   config: path.resolve(containerPath, './app/src/module/config'),
-  juicer: path.resolve(containerPath, './app/link/juicer/juicer-min'),
-  'base-extend-backbone': path.resolve(containerPath, './app/src/module/base'),
-  'auxiliary-additions': path.resolve(containerPath, './app/src/module/base')
+  juicer: path.resolve(containerPath, './app/link/juicer/juicer-min')
 };
 
 module.exports = alias;
