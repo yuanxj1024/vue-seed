@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "copy": "gulp copy-to-dist",
+    "predev": "gulp build",
     "dev": "webpack --watch --colors --config bin/webpack.dev.config.js",
     "eslint": "node_modules/eslint/bin/eslint.js app/src",
     "precommit": "npm run eslint",
     "precopy": "NODE_ENV=product gulp rebuild:config",
-    "predev": "gulp build",
     "preproduct": "webpack --colors --config bin/webpack.product.config.js --optimize-minimize",
     "prerelease": "npm run copy",
     "product": "gulp build",

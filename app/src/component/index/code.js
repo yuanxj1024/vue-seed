@@ -1,5 +1,5 @@
 const Vue = window.Vue;
-const tpl = require('./main.jade');
+const tpl = require('./code.jade');
 
 const View = Vue.extend({
   template: tpl(),

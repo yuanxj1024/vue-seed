@@ -8,9 +8,8 @@ html(lang="en")
     body
         include jade/header
         
-        
-        include component/index/main
-        
+        div#app
+          router-view(keep-alive)
         
         include jade/footer
         include jade/lib

@@ -1,16 +1,9 @@
 {
-  "random":true,
-  "script":[
-      "jquery/dist/jquery.min.js",
-      "underscore/underscore-min.js",
-      "backbone/backbone-min.js",
-      "bootstrap/dist/js/bootstrap.min.js"
+  "random": true,
+  "script": [
+    "vue/dist/vue.min.js",
+    "vue-router/dist/vue-router.min.js",
+    "underscore/underscore-min.js"
   ],
-  "style":[
-    "bootstrap/dist/css/bootstrap.min.css"
-  ],
-  "title":{
-    "index":"webpack index",
-    "code":"webpack code"
-  }
+  "style": []
 }

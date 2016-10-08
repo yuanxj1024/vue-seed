@@ -17,6 +17,7 @@ gulp.task('server', function () {
 });
 
 gulp.task('build', function () {
+  rimraf.sync('./app/www');
   return gulp.src([
       'app/plugins/*.*',
       'app/plugins/**/*.*',

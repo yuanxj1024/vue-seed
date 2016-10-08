@@ -6,8 +6,9 @@ var containerPath = path.resolve('./');
 
 //	别名
 var alias = {
-  config: path.resolve(containerPath, './app/src/module/config'),
-  juicer: path.resolve(containerPath, './app/link/juicer/juicer-min')
+  'vux-components': path.resolve(containerPath, './app/plugins/vux/dist/components'),
+  'vue-router': path.resolve(containerPath, './app/plugins/vue-router/dist/vue-router.min.js'),
+  'vue-resource': path.resolve(containerPath, './app/plugins/vue-resource/dist/vue-resource.min.js')
 };
 
 module.exports = alias;
