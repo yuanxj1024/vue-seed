@@ -2,7 +2,6 @@
   "random": true,
   "script": [
     "vue/dist/vue.min.js",
-    "vue-router/dist/vue-router.min.js",
     "underscore/underscore-min.js"
   ],
   "style": []
