@@ -4,18 +4,20 @@
   "description": "backbone项目脚手架",
   "main": "index.js",
   "scripts": {
-    "copy": "gulp copy-to-dist",
+
     "predev": "gulp build",
     "dev": "webpack --watch --colors --config bin/webpack.dev.config.js",
+    "start": "gulp server",
+
     "eslint": "node_modules/eslint/bin/eslint.js app/src",
     "precommit": "npm run eslint",
-    "precopy": "NODE_ENV=product gulp rebuild:config",
-    "preproduct": "webpack --colors --config bin/webpack.product.config.js --optimize-minimize",
+
+    "copy": "gulp copy-to-dist",
     "prerelease": "npm run copy",
-    "product": "gulp build",
     "release": "webpack --colors --config bin/webpack.product.config.js --optimize-minimize",
-    "start": "gulp server",
-    "test": "mocha --colors test/*.spec.js"
+
+    "beta": "",
+    "svn": ""
   },
   "repository": {
     "type": "git"

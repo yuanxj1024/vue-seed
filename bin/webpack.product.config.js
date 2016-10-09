@@ -57,7 +57,7 @@ for (var chunkname in pages) {
 var config = {
   entry: entrys,
   output: {
-    path: path.resolve(containerPath, './app/www/'),
+    path: path.resolve(containerPath, './dist/'),
     publicPath: './',
     filename: '[name].js'
   },

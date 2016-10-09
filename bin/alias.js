@@ -13,7 +13,8 @@ var alias = {
   _: path.resolve(containerPath, './app/plugins/underscore/underscore-min.js'),
   actions: path.resolve(containerPath, './app/src/store/actions'),
   getters: path.resolve(containerPath, './app/src/store/getters'),
-  modules: path.resolve(containerPath, './app/src/store/modules')
+  modules: path.resolve(containerPath, './app/src/store/modules'),
+  mutationType: path.resolve(containerPath, './app/src/store/mutation-type.js')
 };
 
 module.exports = alias;

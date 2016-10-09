@@ -1,7 +1,11 @@
+import {
+  USERNAME,
+} from 'mutationType';
+
 const setName = ({
   dispatch,
 }, name) => {
-  dispatch('NAME', name);
+  dispatch(USERNAME, name);
 };
 
 module.exports = {

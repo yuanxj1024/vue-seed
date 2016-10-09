@@ -6,6 +6,14 @@ var webConfig = require('./app/src/base/config.default.js');
 var fs = require('fs');
 var rimraf = require('rimraf');
 
+var path = {
+  static: [
+    './app/images/**/*.*',
+    './app/plugins/**/*.*'
+  ]
+};
+
+
 gulp.task('server', function () {
   browserSync.init({
     server: './app/www',
@@ -19,7 +27,6 @@ gulp.task('server', function () {
 gulp.task('build', function () {
   rimraf.sync('./app/www');
   return gulp.src([
-      'app/plugins/*.*',
       'app/plugins/**/*.*',
     ], {
       base: 'app/'
@@ -27,27 +34,11 @@ gulp.task('build', function () {
     .pipe(gulp.dest('app/www/'))
 });
 gulp.task('copy-to-dist', function () {
-  return gulp.src([
-      'app/plugins/*.*',
-      'app/plugins/**/*.*',
-    ], {
+  rimraf.sync('./dist');
+  return gulp.src(path.static, {
       base: 'app'
     })
     .pipe(gulp.dest('./dist'))
-});
-
-
-
-gulp.task('webpack', function (callback) {
-  var webpack = require('webpack');
-  var productConfig = require('./bin/webpack.product.config.js');
-  webpack(productConfig, function (err, stats) {
-    if (err) {
-      throw new gutil.PluginError('webpack', err);
-    }
-    gutil.log('[webpack]', stats.toString());
-    callback();
-  });
 });
 
 gulp.task('clean', function () {
@@ -55,7 +46,7 @@ gulp.task('clean', function () {
 });
 
 //读取./src/config.demo.js ,修正config.js
-gulp.task('rebuild:config',['clean'], function () {
+gulp.task('rebuild:config', ['clean'], function () {
   if (process.env.NODE_ENV == 'product') {
     webConfig.scheme = 'release';
   } else {

@@ -1,12 +1,16 @@
 /**
  * 用户信息
  */
+import {
+  USERNAME,
+} from 'mutationType';
+
 const state = {
   name: '',
 };
 
 const mutations = {
-  NAME: (s, name) => {
+  [USERNAME]: (s, name) => {
     s.name = name;
   },
 };
