@@ -24,3 +24,4 @@ app/src/module/config.js
 app/src/module/config.default.js
 dist
 app/plugins/**
+app/src/base

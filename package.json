@@ -10,6 +10,7 @@
     "eslint": "node_modules/eslint/bin/eslint.js app/src",
     "precommit": "npm run eslint",
     "copy": "gulp copy-to-dist",
+    "precopy": "npm run eslint",
     "prerelease": "npm run copy",
     "release": "webpack --colors --config bin/webpack.product.config.js --optimize-minimize",
     "beta": "",
