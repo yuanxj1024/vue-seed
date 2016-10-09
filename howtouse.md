@@ -1,4 +1,4 @@
-# mp牛人BBS项目
+# vue项目种子使用说明
 
 > Node version v4.4.1
 
