@@ -1,3 +1,6 @@
+/**
+ * 用户信息Actions
+ */
 import {
   USERNAME,
 } from 'mutationType';
