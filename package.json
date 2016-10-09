@@ -16,6 +16,7 @@
     "beta": "",
     "svn": ""
   },
+  "precommit":"eslint",
   "repository": {
     "type": "git"
   },
@@ -26,7 +27,6 @@
   "bugs": {
     "url": ""
   },
-  "precommit":"eslint",
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-eslint": "^7.0.0",
