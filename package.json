@@ -4,18 +4,14 @@
   "description": "backbone项目脚手架",
   "main": "index.js",
   "scripts": {
-
     "predev": "gulp build",
     "dev": "webpack --watch --colors --config bin/webpack.dev.config.js",
     "start": "gulp server",
-
     "eslint": "node_modules/eslint/bin/eslint.js app/src",
     "precommit": "npm run eslint",
-
     "copy": "gulp copy-to-dist",
     "prerelease": "npm run copy",
     "release": "webpack --colors --config bin/webpack.product.config.js --optimize-minimize",
-
     "beta": "",
     "svn": ""
   },
@@ -54,6 +50,7 @@
     "jade-loader": "^0.8.0",
     "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
+    "pre-commit": "^1.1.3",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.4",
     "sass-loader": "^3.2.0",

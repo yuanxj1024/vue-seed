@@ -5,5 +5,5 @@
 const USERNAME = 'USERNAME';
 
 module.exports = {
-  USERNAME
+  USERNAME,
 };
