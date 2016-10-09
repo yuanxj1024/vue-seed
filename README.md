@@ -1,7 +1,18 @@
-# 港美股独立H5项目
+# 基于vue（1.0）项目种子
+
+*	技术点
+	*	vue1.0
+	*	vuex
+	*	vux
+	*	vue-router
 
 
-*	2016-10-09
-	*	内容
-		
-		项目构建	- YuanXuJia	
+`项目特点`
+
+*	基于ES6语法
+*	遵循airbnb语法规范
+*	支持code split
+*	
+
+	
+
