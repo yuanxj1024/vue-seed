@@ -70,10 +70,7 @@ var config = {
     }, {
       test: /\.js$/,
       loader: 'babel-loader',
-      exclude: /(node_modules|plugins)/,
-      query: {
-        presets: ['es2015']
-      }
+      exclude: /(node_modules|plugins)/
     }, {
       test: /\.scss$/i,
       loader: extractSASS.extract(['css', 'sass'])

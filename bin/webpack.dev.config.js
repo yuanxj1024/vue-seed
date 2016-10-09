@@ -69,11 +69,8 @@ var config = {
       exclude: /(node_modules)/
     }, {
       test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: /(node_modules|plugins)/,
-      query: {
-        presets: ['es2015']
-      }
+      loaders: ['babel-loader', 'eslint-loader'],
+      exclude: /(node_modules|plugins)/
     }, {
       test: /\.scss$/i,
       loader: extractSASS.extract(['css', 'sass'])
