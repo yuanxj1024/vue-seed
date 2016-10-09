@@ -25,9 +25,9 @@
   "bugs": {
     "url": ""
   },
-  "pre-commit": {
-    "run": "eslint"
-  },
+  "pre-commit": [
+    "eslint"
+  ],
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-eslint": "^7.0.0",
