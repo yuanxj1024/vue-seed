@@ -1,5 +1,5 @@
 /**
- * 用户信息Actions
+ * 用户信息Actions2
  */
 import {
   USERNAME,
