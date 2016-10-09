@@ -12,6 +12,7 @@ var alias = {
   vuex: path.resolve(containerPath, './app/plugins/vuex/dist/vuex.min.js'),
   _: path.resolve(containerPath, './app/plugins/underscore/underscore-min.js'),
   actions: path.resolve(containerPath, './app/src/store/actions'),
+  getters: path.resolve(containerPath, './app/src/store/getters'),
   modules: path.resolve(containerPath, './app/src/store/modules')
 };
 

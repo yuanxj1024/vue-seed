@@ -1,6 +1,10 @@
 import {
   setName,
 } from 'actions/user.js';
+import {
+  userName,
+} from 'getters/user.js';
+
 
 const _ = require('_');
 
@@ -17,6 +21,7 @@ const View = Vue.extend({
       }) {
         return user.name;
       },
+      userName,
     },
     actions: {
       setName,

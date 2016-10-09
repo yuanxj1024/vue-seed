@@ -62,7 +62,6 @@ require.ensure(['./base/router/routers.js', 'vue-resource', 'vue-router', '_'], 
     document.addEventListener('touchmove', touchmoveHandle, false);
   }
 
-  console.log('store', store);
   const App = Vue.extend({
     components: {
       // toast: Toast,
