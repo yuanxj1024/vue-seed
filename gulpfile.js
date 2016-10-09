@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var browser = require('browser-sync');
 var browserSync = browser.create();
 var gutil = require('gulp-util');
-var webConfig = require('./app/src/module/config.default.js');
+var webConfig = require('./app/src/base/config.default.js');
 var fs = require('fs');
 var rimraf = require('rimraf');
 

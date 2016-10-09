@@ -1,17 +1,23 @@
-// import VueResource from 'vue-resource';
+import store from './store/store.js';
 
-require.ensure(['./module/router/routers.js', 'vue-resource', 'vue-router'], (require) => {
+const Vue = window.Vue;
+// const Vuex = window.Vuex;
+
+// Vue.use(Vuex);
+
+require.ensure(['./base/router/routers.js', 'vue-resource', 'vue-router', '_'], (require) => {
   // import bridge from 'bridge';
   // import AppData from 'appData';
   // import Toast from 'vux-components/toast';
   // import Loading from 'vux-components/loading';
 
-  // import routerConfig from './module/router/routers.js';
-  const routerConfig = require('./module/router/routers.js');
+  // import routerConfig from './base/router/routers.js';
+  // const store = require('vuex');
+  const routerConfig = require('./base/router/routers.js');
   const VueResource = require('vue-resource');
+  // const Vuex = require('vuex');
   // import pageConfig from './js/page-title.config.js';
   //
-  const Vue = window.Vue;
   const VueRouter = require('vue-router');
   //
   // 插件
@@ -28,7 +34,6 @@ require.ensure(['./module/router/routers.js', 'vue-resource', 'vue-router'], (re
   // bridge.initClose(0);
   // 需要刷新
   // bridge.initRefresh(0);
-
 
   Vue.use(VueRouter);
 
@@ -57,12 +62,14 @@ require.ensure(['./module/router/routers.js', 'vue-resource', 'vue-router'], (re
     document.addEventListener('touchmove', touchmoveHandle, false);
   }
 
+  console.log('store', store);
   const App = Vue.extend({
     components: {
       // toast: Toast,
       // loading: Loading,
     },
-    data: () => {
+    store,
+    data() {
       return {
         toast: {
           error: false,
@@ -77,13 +84,11 @@ require.ensure(['./module/router/routers.js', 'vue-resource', 'vue-router'], (re
         blockShow: false,
       };
     },
-    ready: () => {
-      // document.getElementById('pluginsWrap').style.display = 'block';
+    ready() {
       disableScroller();
-      console.log('index ready');
     },
     methods: {
-      getRate: (type) => {
+      getRate(type) {
         console.log(type);
         // return _.find(AppData.moneyExchangeList(), (item) => {
         //   return item.ratename === type;
@@ -102,7 +107,7 @@ require.ensure(['./module/router/routers.js', 'vue-resource', 'vue-router'], (re
         }
         this.toast.showContent = text;
       },
-      showLoading: (isShow, text) => {
+      showLoading(isShow, text) {
         this.loading.show = isShow;
         if (text) {
           this.loading.text = text;

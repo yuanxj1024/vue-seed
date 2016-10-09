@@ -31,7 +31,7 @@ plugins.push(extractSASS);
 // plugins.push(new webpack.optimize.CommonsChunkPlugin('common', 'common.js'));
 
 //  处理html
-var pages = getEntry('./app/web/*.jade');
+var pages = getEntry('./app/src/*.jade');
 for (var chunkname in pages) {
   var conf = {
     filename: chunkname + '.html',
@@ -41,7 +41,7 @@ for (var chunkname in pages) {
       removeComments: true,
       collapseWhitespace: false
     },
-    chunks: ['common', chunkname],
+    chunks: [chunkname],
     hash: true,
     complieConfig: compileConfig
   }
@@ -57,7 +57,7 @@ for (var chunkname in pages) {
 var config = {
   entry: entrys,
   output: {
-    path: path.resolve(containerPath, './dist/'),
+    path: path.resolve(containerPath, './app/www/'),
     publicPath: './',
     filename: '[name].js'
   },
@@ -70,7 +70,7 @@ var config = {
     }, {
       test: /\.js$/,
       loader: 'babel-loader',
-      exclude: /(node_modules)/,
+      exclude: /(node_modules|plugins)/,
       query: {
         presets: ['es2015']
       }

@@ -2,7 +2,7 @@
   "random": true,
   "script": [
     "vue/dist/vue.min.js",
-    "underscore/underscore-min.js"
+    "vuex/dist/vuex.min.js"
   ],
   "style": []
 }
